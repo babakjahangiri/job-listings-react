@@ -1,0 +1,13 @@
+@import "../../scss/variables";
+
+.jobcard-container {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  -webkit-box-shadow: 0px 10px 17px 0px $card-boxshadow-color;
+  -moz-box-shadow: 0px 10px 17px 0px $card-boxshadow-color;
+  box-shadow: 0px 10px 17px 0px $card-boxshadow-color;
+  min-height: 150px;
+  font-family: $heading-font;
+}

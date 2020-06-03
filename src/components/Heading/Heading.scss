@@ -1,0 +1,21 @@
+@import "../../scss/variables";
+
+.heading {
+  background-image: url("../../images/bg-header-mobile.svg");
+  height: 156px;
+  background-position: center;
+  background-color: $desaturated-dark-cyan;
+}
+@media (max-width: 375px) {
+  .heading {
+    max-width: 375px;
+  }
+}
+@media (min-width: 376px) {
+  .heading {
+    background-image: url("../../images/bg-header-desktop.svg");
+    width: 100%;
+    width: 100vw;
+    height: 156px;
+  }
+}
