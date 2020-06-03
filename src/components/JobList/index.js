@@ -2,11 +2,14 @@ import React from "react";
 import "./JobList.scss";
 import "./../JobCard";
 import JobCard from "./../JobCard";
+import JobData from "./../../data.json";
 
 const JobList = () => {
   return (
     <div class="joblist-container">
-      <JobCard />
+      {JobData.map((jobinfo, index) => (
+        <JobCard jobinfo={jobinfo} key={jobinfo.id} />
+      ))}
     </div>
   );
 };

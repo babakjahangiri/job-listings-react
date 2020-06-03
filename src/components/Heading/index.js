@@ -2,7 +2,7 @@ import React from "react";
 import "./Heading.scss";
 
 const Heading = () => {
-  return <div class="heading"></div>;
+  return <div className="heading"></div>;
 };
 
 export default Heading;

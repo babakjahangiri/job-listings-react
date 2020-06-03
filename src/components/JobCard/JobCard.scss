@@ -1,8 +1,10 @@
 @import "../../scss/variables";
 
 .jobcard-container {
-  width: 90%;
   display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #ffffff;
   justify-content: flex-start;
   align-items: center;
   -webkit-box-shadow: 0px 10px 17px 0px $card-boxshadow-color;
@@ -10,4 +12,71 @@
   box-shadow: 0px 10px 17px 0px $card-boxshadow-color;
   min-height: 150px;
   font-family: $heading-font;
+  margin: 15px;
+}
+
+.jobcardimage-container {
+  width: 10%;
+  text-align: center;
+  padding: 5px;
+}
+
+.joninfo-container {
+  width: 40%;
+
+  h1 {
+    font-family: $heading-font;
+    color: #080808;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+  h2 {
+    font-family: $heading-font;
+    color: $desaturated-dark-cyan;
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+
+  h4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-family: $heading-font;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #a0a0a0;
+
+    span {
+      align-self: flex-end;
+    }
+
+    .bd {
+      font-size: 1.5rem;
+      font-weight: 500;
+      padding: 1px 7px 1px 7px;
+      align-self: baseline;
+    }
+  }
+}
+
+.tags-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+.tags {
+  background-color: $background-color;
+  color: $desaturated-dark-cyan;
+  font-family: $heading-font;
+  padding: 8px 6px 7px 6px;
+  font-weight: 600;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 0.75rem;
+  margin: 0 7px;
 }
