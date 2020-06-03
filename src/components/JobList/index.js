@@ -6,7 +6,7 @@ import JobData from "./../../data.json";
 
 const JobList = () => {
   return (
-    <div class="joblist-container">
+    <div className="joblist-container">
       {JobData.map((jobinfo, index) => (
         <JobCard jobinfo={jobinfo} key={jobinfo.id} />
       ))}

@@ -3,15 +3,20 @@ import LangSkills from "../../components/LangSkills";
 import Role from "../../components/Role";
 import Level from "../../components/Level";
 import "./JobCard.scss";
+import NotifyTags from "../NotifyTags";
 
 const JobCard = ({ jobinfo }) => {
   return (
-    <div class="jobcard-container">
+    <div className="jobcard-container">
       <div className="jobcardimage-container">
         <img src={jobinfo.logo} alt={jobinfo.company} />
       </div>
       <div className="joninfo-container">
-        <h2>{jobinfo.company}</h2>
+        <h2>
+          {jobinfo.company}{" "}
+          <NotifyTags new={jobinfo.new} featured={jobinfo.featured} />
+        </h2>
+
         <h1>{jobinfo.position}</h1>
         <h4>
           <span>{jobinfo.postedAt}</span>
