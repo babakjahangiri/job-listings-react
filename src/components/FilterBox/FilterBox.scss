@@ -1,0 +1,66 @@
+@import "../../scss/variables";
+
+.filterbox-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  //justify-content: flex-start;
+  background-color: #ffffff;
+  width: 100%;
+  min-height: 80px;
+  margin-bottom: 30px;
+  top: -20px;
+  border-radius: 8px;
+}
+
+.filterboxtags-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  flex-basis: auto;
+  flex-grow: 2;
+  margin-left: 20px;
+}
+
+.clear-container {
+  min-width: 100px;
+  text-align: center;
+  vertical-align: middle;
+  font-family: $heading-font;
+  margin: auto;
+  p {
+    background-color: #ffffff;
+    color: $desaturated-dark-cyan;
+    font-size: 0.85rem;
+    font-weight: 700;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+.tagfilter-container {
+  align-self: center;
+  margin: 8px;
+  font-size: 0.85rem;
+  font-family: $heading-font;
+  font-weight: 700;
+
+  span {
+    padding: 10px;
+  }
+
+  :first-child {
+    background-color: $background-color;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  :last-child {
+    background-color: #000000;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    vertical-align: middle;
+  }
+}

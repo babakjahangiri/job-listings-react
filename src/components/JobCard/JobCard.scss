@@ -10,9 +10,20 @@
   -webkit-box-shadow: 0px 10px 17px 0px $card-boxshadow-color;
   -moz-box-shadow: 0px 10px 17px 0px $card-boxshadow-color;
   box-shadow: 0px 10px 17px 0px $card-boxshadow-color;
+  border-radius: 5px;
   min-height: 150px;
   font-family: $heading-font;
-  margin: 15px;
+  margin: 30px auto;
+
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+}
+
+.featured {
+  border-left: solid 5px $desaturated-dark-cyan;
 }
 
 .jobcardimage-container {
@@ -29,6 +40,9 @@
     color: #080808;
     font-size: 1.25rem;
     font-weight: 700;
+    &:hover {
+      color: $desaturated-dark-cyan;
+    }
   }
   h2 {
     font-family: $heading-font;
@@ -79,4 +93,9 @@
   text-align: center;
   font-size: 0.75rem;
   margin: 0 7px;
+
+  &:hover {
+    background-color: $desaturated-dark-cyan;
+    color: #ffffff;
+  }
 }

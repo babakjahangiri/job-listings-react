@@ -7,7 +7,7 @@ import NotifyTags from "../NotifyTags";
 
 const JobCard = ({ jobinfo }) => {
   return (
-    <div className="jobcard-container">
+    <div className={`jobcard-container ${jobinfo.featured && "featured"}`}>
       <div className="jobcardimage-container">
         <img src={jobinfo.logo} alt={jobinfo.company} />
       </div>
