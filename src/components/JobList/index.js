@@ -9,17 +9,14 @@ const JobList = () => {
   const [filters, setFilters] = useState([]);
 
   function addToFilterBox(filterName) {
-    alert("Added to filter box");
     !filters.includes(filterName) && setFilters([...filters, filterName]);
   }
 
   function removeFromFilterBox(filterName) {
-    alert("Remove from filterbox");
     setFilters(filters.filter((filter) => filter !== filterName));
   }
 
   function clearFilterBox() {
-    alert("clear the filterbox");
     setFilters([]);
   }
 
@@ -39,7 +36,11 @@ const JobList = () => {
 
   return (
     <div className="joblist-container">
-      <FilterBox tags={filteredJobs} />
+      <FilterBox
+        tags={filters}
+        handleTagsRemove={removeFromFilterBox}
+        handleSetClear={clearFilterBox}
+      />
       {filteredJobs.map((jobinfo, index) => (
         <JobCard
           key={jobinfo.id}
