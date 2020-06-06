@@ -35,20 +35,22 @@ const JobList = () => {
   });
 
   return (
-    <div className="joblist-container">
+    <React.Fragment>
       <FilterBox
         tags={filters}
         handleTagsRemove={removeFromFilterBox}
         handleSetClear={clearFilterBox}
       />
-      {filteredJobs.map((jobinfo, index) => (
-        <JobCard
-          key={jobinfo.id}
-          jobinfo={jobinfo}
-          tagHandleSelect={addToFilterBox}
-        />
-      ))}
-    </div>
+      <div className="joblist-container">
+        {filteredJobs.map((jobinfo, index) => (
+          <JobCard
+            key={jobinfo.id}
+            jobinfo={jobinfo}
+            tagHandleSelect={addToFilterBox}
+          />
+        ))}
+      </div>
+    </React.Fragment>
   );
 };
 

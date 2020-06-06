@@ -1,15 +1,17 @@
 @import "../../scss/variables";
 
-.filterbox-container {
+.filterbox-trasparent-container {
   position: relative;
+  min-height: 100px;
+  width: 80%;
+  top: -50px;
+}
+.filterbox-container {
   display: flex;
   flex-direction: row;
   //justify-content: flex-start;
   background-color: #ffffff;
-  width: 100%;
   min-height: 80px;
-  bottom: 1px;
-  top: -20px;
   border-radius: 8px;
 }
 
