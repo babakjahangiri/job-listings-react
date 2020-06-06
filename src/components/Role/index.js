@@ -1,7 +1,16 @@
 import React from "react";
 
-const Role = (props) => {
-  return <p className="tags">{props.roles}</p>;
+const Role = ({ role, tagHandleSelect }) => {
+  return (
+    <p
+      className="tags"
+      onClick={() => {
+        tagHandleSelect(role);
+      }}
+    >
+      {role}
+    </p>
+  );
 };
 
 export default Role;

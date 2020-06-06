@@ -1,7 +1,16 @@
 import React from "react";
 
-const Level = (props) => {
-  return <p className="tags">{props.levels}</p>;
+const Level = ({ level, tagHandleSelect }) => {
+  return (
+    <p
+      className="tags"
+      onClick={() => {
+        tagHandleSelect(level);
+      }}
+    >
+      {level}
+    </p>
+  );
 };
 
 export default Level;

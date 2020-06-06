@@ -2,10 +2,15 @@ import React from "react";
 import LangSkills from "../../components/LangSkills";
 import Role from "../../components/Role";
 import Level from "../../components/Level";
+import Tools from "../../components/Tools";
 import "./JobCard.scss";
 import NotifyTags from "../NotifyTags";
 
-const JobCard = ({ jobinfo }) => {
+const JobCard = ({ jobinfo, tagHandleSelect }) => {
+  //console.log(tagHandleSelect);
+  console.log();
+  console.log(jobinfo);
+
   return (
     <div className={`jobcard-container ${jobinfo.featured && "featured"}`}>
       <div className="jobcardimage-container">
@@ -27,9 +32,13 @@ const JobCard = ({ jobinfo }) => {
         </h4>
       </div>
       <div className="tags-container">
-        <Role roles={jobinfo.role} />
-        <Level levels={jobinfo.level} />
-        <LangSkills langs={jobinfo.languages} />
+        <Role role={jobinfo.role} tagHandleSelect={tagHandleSelect} />
+        <Level level={jobinfo.level} tagHandleSelect={tagHandleSelect} />
+        <LangSkills
+          langs={jobinfo.languages}
+          tagHandleSelect={tagHandleSelect}
+        />
+        <Tools tools={jobinfo.tools} tagHandleSelect={tagHandleSelect} />
       </div>
     </div>
   );

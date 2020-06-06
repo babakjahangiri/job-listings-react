@@ -1,35 +1,27 @@
 import React from "react";
 import "./FilterBox.scss";
 import iconRemove from "./../../images/icon-remove.svg";
-const FilterBox = () => {
+
+const FilterBox = ({ tags, handleTagsRemove, handleSetClear }) => {
+  //className={tags.length === 0 && "filterbox-hidden"}
   return (
-    <div className="filterbox-container">
-      <div className="filterboxtags-container">
-        <p className="tagfilter-container">
-          <span>Frontend</span>
-          <span>
-            <img src={iconRemove} alt="remove" />
-          </span>
-        </p>
-
-        <p className="tagfilter-container">
-          <span>Backend</span>
-          <span>
-            <img src={iconRemove} alt="remove" />
-          </span>
-        </p>
-
-        <p className="tagfilter-container">
-          <span>HTML</span>
-          <span>
-            <img src={iconRemove} alt="remove" />
-          </span>
-        </p>
+    tags.length.length > 0 && (
+      <div className="filterbox-container">
+        <div className="filterboxtags-container">
+          {tags.map((role, index) => (
+            <p className="tagfilter-container" key={role.id}>
+              <span>{role}</span>
+              <span>
+                <img src={iconRemove} alt="remove" />
+              </span>
+            </p>
+          ))}
+        </div>
+        <div className="clear-container">
+          <p>Clear</p>
+        </div>
       </div>
-      <div class="clear-container">
-        <p>Clear</p>
-      </div>
-    </div>
+    )
   );
 };
 

@@ -56,9 +56,10 @@
     background-color: $background-color;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
+    color: $desaturated-dark-cyan;
   }
   :last-child {
-    background-color: #000000;
+    background-color: $very-dark-grayish-cyan;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     vertical-align: middle;
