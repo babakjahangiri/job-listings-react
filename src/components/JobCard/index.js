@@ -8,8 +8,8 @@ import NotifyTags from "../NotifyTags";
 
 const JobCard = ({ jobinfo, tagHandleSelect }) => {
   //console.log(tagHandleSelect);
-  console.log();
-  console.log(jobinfo);
+  //console.log();
+  //console.log(jobinfo);
 
   return (
     <div className={`jobcard-container ${jobinfo.featured && "featured"}`}>
